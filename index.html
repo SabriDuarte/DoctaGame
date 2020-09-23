@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>DoctaGame</title>
+</head>
+<body>
+    <h1>DoctaGames!</h1>
+    <div id="listaCuentas" class="contenedor">
+        <form id="registrarUsuario">
+            <input type="text" id="usuario" placeholder="Usuario">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="contraseña" placeholder="Introduce tu contraseña" autocomplete="on">
+            <input type="submit" id="registrar" value="Registrar Usuario">
+        </form>
+        <div id="mensaje"></div>
+        <form id="eliminarUsuario">
+            <input type="text" id="eliNombre" placeholder="Nombre">
+            <input type="submit" id="eliminar" value="Eliminar Usuario">
+        </form>
+        <h2>Iniciar Sesión</h2>
+        <form id="login">
+            <input type="text" id="loginUsuario" placeholder="Ingrese su usuario">
+            <input type="email" id="loginEmail" placeholder="Email">
+            <input type="password" id="loginContraseña" placeholder="Contraseña" autocomplete="on">
+            <input type="submit" id="ingreso" value="ingresar">
+        </form>
+        <div id="msgLogin"></div>
+        <h2>Desea Modificar Usuario?</h2>
+        <form id="modificarUsuario">
+            <select id="selectUsuario">
+                <option value="">Seleccioná un Usuario</option>
+            </select>
+            <input type="text" id="modUsuario" placeholder="Nombre">
+            <input type="email" id="modEmail" placeholder="Email">
+            <input type="password" id="modContraseña" autocomplete="on" placeholder="Contraseña">
+            <input type="submit" id="modificar" value="Modificar">
+        </form>
+        <div id="msjModificar"></div>
+    </div>
+    <div id="resetContraseña">
+        <a href="#">Olvide mi contraseña?</a>
+    </div>
+    <script src='script.js'></script>
+</body>
+</html>
