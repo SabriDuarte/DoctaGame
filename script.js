@@ -48,7 +48,8 @@ $formRegistrar.addEventListener('submit',function(e){
     let $formEliminar = document.querySelector('#eliminarUsuario');
 
 
-    $formEliminar.addEventListener('submit',function(){
+    $formEliminar.addEventListener('submit',function(e){
+        e.preventDefault();
         let $eliNombre = document.querySelector('#eliNombre').value;
         let pos = cuentas.findIndex(function(cuenta){
         return cuenta.usuario === $eliNombre;
