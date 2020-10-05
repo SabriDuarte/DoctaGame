@@ -41,23 +41,22 @@ $formRegistrar.addEventListener('submit',function(e){
     cuentas.push(usuario);
     let $msgRegistrar = document.querySelector('#mensaje');
     $msgRegistrar.innerHTML = 'El usuario se registro correctamente';
-        $formRegistrar.reset();
+    $formRegistrar.reset();
+
+    });
 
     let $formEliminar = document.querySelector('#eliminarUsuario');
-        $formEliminar.setAttribute('pos','');
-    let pos = cuentas.findIndex(function(event){
-    return cuentas.usuario == event.usuario;
-    });
-    let $eliminar = document.querySelector('#eliminar');
-    $eliminar.addEventListener('submit',function(){
+
+
+    $formEliminar.addEventListener('submit',function(){
+        let $eliNombre = document.querySelector('#eliNombre').value;
+        let pos = cuentas.findIndex(function(cuenta){
+        return cuenta.usuario === $eliNombre;
+        });
         cuentas.splice(pos, 1);
-        $nombre.remove();
-        $email.remove();
-        $password.remove();
-        $eliminar.remove();
+        console.log(cuentas)
 
     });
-});
 
 
 let $formLogin = document.querySelector('#login');
